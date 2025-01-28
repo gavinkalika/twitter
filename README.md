@@ -8,9 +8,11 @@ https://docs.x.com/x-api/users/unfollow-user
 
 https://docs.x.com/x-api/bookmarks/bookmarks-by-user
 
+https://docs.x.com/x-api/bookmarks/remove-a-bookmarked-post
+
 ## Description
 
-This application connects to your Twitter account and retrieves your bookmarked tweets, displaying their IDs and content in the console. It uses the Tweepy library to interact with Twitter's API v2, which is required for accessing bookmarks functionality.
+This application connects to your Twitter account an d retrieves your bookmarked tweets, displaying their IDs and content in the console. It uses the Tweepy library to interact with Twitter's API v2, which is required for accessing bookmarks functionality.
 
 ## Prerequisites
 
