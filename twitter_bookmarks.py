@@ -21,7 +21,8 @@ def get_bookmark():
         client = tweepy.Client(
             BEARER_TOKEN
         )
-        
+        # https://www.npmjs.com/package/localtunnel
+        # https://dashboard.ngrok.com/get-started/setup/macos
         # Get bookmarks with pagination
         for response in tweepy.Paginator(
             client.get_bookmarks,
@@ -32,39 +33,9 @@ def get_bookmark():
         ):
             if response.data:
                 print(response.data)
-                # Search for the specific tweet in bookmarks
-                # for tweet in response.data:
-                #     if str(tweet.id) == str(tweet_id):
-                #         # Get author information
-                #         users = {user.id: user for user in response.includes['users']} if 'users' in response.includes else {}
-                #         author = users.get(tweet.author_id)
-                        
-                #         # Print detailed tweet information
-                #         print("\nTweet Details:")
-                #         print("-" * 50)
-                #         print(f"Tweet ID: {tweet.id}")
-                #         print(f"Author: @{author.username if author else 'unknown'}")
-                #         print(f"Name: {author.name if author else 'unknown'}")
-                #         print(f"Text: {tweet.text}")
-                        
-                #         if tweet.public_metrics:
-                #             print("\nEngagement Metrics:")
-                #             print(f"Likes: {tweet.public_metrics['like_count']}")
-                #             print(f"Retweets: {tweet.public_metrics['retweet_count']}")
-                #             print(f"Replies: {tweet.public_metrics['reply_count']}")
-                #             print(f"Quote Tweets: {tweet.public_metrics['quote_count']}")
-                        
-                #         print(f"\nCreated at: {tweet.created_at}")
-                        
-                #         # Print URLs if present
-                #         if hasattr(tweet, 'entities') and 'urls' in tweet.entities:
-                #             print("\nLinks in Tweet:")
-                #             for url in tweet.entities['urls']:
-                #                 print(f"- {url['expanded_url']}")
-                        
-                #         return tweet
+         
         
-        print(f"Tweet {tweet_id} not found in your bookmarks.")
+        # print(f"Tweet {tweet_id} not found in your bookmarks.")
         return None
             
     except Exception as e:
@@ -86,7 +57,12 @@ def remove_bookmark(tweet_id):
 def main():
     # tweet_id = input("Enter the tweet ID to fetch: ")
     # print(f"\nFetching tweet {tweet_id}...")
-    get_bookmark()
+    # get_bookmark()
+    # Return JSON-friendly response
+    return {
+        'statusCode': 200,
+        'body': 'it works'
+    }
 
 if __name__ == "__main__":
     main() 
