@@ -87,3 +87,54 @@ php artisan make:migration create_table_name
 - Composer (PHP package manager)
 - Laravel Framework
 - Essential tools: git, curl, zip/unzip
+
+🐦 Twitter Address
+
+A utility that interacts with the Twitter (X) API to help automate and manage your account activity with ease.
+
+⚙️ Features
+
+🗑️ Delete Tweets
+	•	Bulk-delete your entire tweet history.
+
+📚 Retrieve Bookmarks
+	•	Fetch all your saved bookmarks.
+
+📁 Organize Bookmarks
+	•	Sort and categorize bookmarks into folders based on keywords, hashtags, or domains.
+
+🤖 Auto-Reply System
+	•	Auto-reply to specific users when they tweet.
+	•	Supports two reply modes:
+	•	🧑‍💼 Professional Mode – polite, helpful responses.
+	•	🧌 Trolling Mode – sarcastic, humorous responses.
+	•	Add a user to the reply system and define their mode.
+
+php twitter-address follow-user @username --mode=pro
+php twitter-address follow-user @username --mode=troll
+
+🕵️‍♂️ Spy (Spy Page Intelligence)
+	•	Monitor public Twitter accounts.
+	•	Get notified when they follow someone new.
+	•	Displays who they followed and when.
+
+php twitter-address Spy @elonmusk
+
+🔐 Requirements
+	•	Twitter Developer App with Elevated access
+	•	OAuth2 user access token or Bearer Token
+
+🚀 Usage
+
+# Delete all tweets
+php twitter-address delete-tweets
+
+# Retrieve bookmarks
+php twitter-address fetch-bookmarks
+
+# Organize bookmarks into folders
+php twitter-address organize-bookmarks
+
+# Auto-reply setup
+php twitter-address follow-user @username --mode=pro
+php twitter-address follow
