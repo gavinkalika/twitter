@@ -1,0 +1,42 @@
+{
+  "name": "twitter-cli-tool",
+  "version": "1.0.0",
+  "description": "CLI tool to fetch tweets from Twitter API",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageReporters": [
+      "text"
+    ],
+    "verbose": true
+  },
+  "keywords": [
+    "twitter",
+    "cli",
+    "api",
+    "tweets"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "twitter-api-v2": "^1.15.2"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
