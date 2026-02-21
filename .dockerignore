@@ -1,0 +1,12 @@
+node_modules
+.git
+.github
+coverage
+tests
+.env
+.opencode
+.idea
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
